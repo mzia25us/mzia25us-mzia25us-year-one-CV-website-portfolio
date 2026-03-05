@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mahnoor Zia CV Website</title>
+        <!--This shows the favicon in the tab bar.-->
+        <link rel="icon" type="image/png" href="favicon.png">
+        <!--The stylesheet linked to this html page.-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--This focuses on the HEADER & TOP NAVIGATION
+        where my name is, a little summary is and a nav bar to 
+        access other pages.-->
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <div class="brand">
+                    <h1 class="name">Mahnoor Zia</h1>
+                    <p class="role">Interested in web design</p>
+                </div>
+                
+                <!--This shows the nav bar. Which page you are currently
+                on is 'active' and allows for other pages to be highlihgted.-->
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!--MAIN CONTENT SECTION 
+        for the page.-->
+        <main class="container">
+            <!--This section has the intro area with profile
+            image, short summary, email, SUN and a CV download for the document CV-->
+            <section class="hero" id="home">
+                <!--Profile image for my name with an image of M-->
+                <img src="favicon.png" alt="Photo of Mahnoor Zia" class="hero-img">
+                <!--Short intro + email, SUN details as required.-->
+                <div class="hero-text">
+                    <h2 class="hero-title">Welcome to my Resume!</h2>
+                    <p class="hero-subtitle">I'm an aspiring web developer building clean, modern websites.</p>
+                    <p class="hero-subtitle"><em>Name: Mahnoor Zia</em></p>
+                    <p class="hero-subtitle"><em>Email: student-number@email.org.uk</em></p>
+                    <p class="hero-subtitle"><em>SUN: student_number</em></p>
+
+                    <!--This download part allows for a file download instead of opening
+                    in a browser-->
+                    <a href="Mahnoor_Zia_CV (4).pdf" class="btn" target="_blank" rel="noopener">Download CV</a>
+                </div>
+            </section>
+
+            <!--EDUCATION + WORK EXPERIENCE BOXES, made from a responsive grid.-->
+            <section class="grid-2">
+                <!--Education box but called card because it is fancy.-->
+                <div class="education">
+                    <div class="card-header">Education</div>
+                    <div class="card-body">
+                        <ul class="list">
+                            <!--Blockquote here works visually and satisfies requirement for blockquote-->
+                            <!--Breaks down education.-->
+                            <li><strong>GCSEs: INSERT SCHOOL NAME</strong></li>
+                            <blockquote>
+                                <ul class="list">
+                                    <li class="hero-summary">GCSEs (7-9) including English Language (8) & Maths (8)</li>
+                                </ul>
+                            </blockquote>
+
+                            <li><strong>A Levels: INSERT SCHOOL NAME</strong></li>
+                            <blockquote>
+                                <ul class="list">
+                                    <li class="hero-summary">A Level Computer Science: B</li>
+                                    <li class="hero-summary">A Level English Literature: A*</li>
+                                    <li class="hero-summary">A Level Maths: C</li>
+                                </ul>
+                            </blockquote>
+
+                            <li><strong>INSERT UNI NAME (20##-20##)</strong></li>
+                            <blockquote>
+                                <ul class="list">
+                                    <li class="hero-summary">BSc Hons Computer Science</li>
+                                </ul>
+                            </blockquote>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Work Experience Block-->
+                <div class="work-experience">
+                    <div class="card-header">Work Experience</div>
+                    <div class="card-body">
+                        <ul class="list">
+                            <li><strong>IT Magazine Designer</strong>: INSERT SCHOOL NAME (2023-2025)</li>
+                            <!--Blockquotes again used visually and to break down experience into 
+                            place and skills gained.-->
+                            <blockquote>
+                                <ul class="list">
+                                    <li class="hero-summary">Developed skills in graphic design.</li>
+                                    <li class="hero-summary">Perfected understanding of Adobe Software.</li>
+                                    <li class="hero-summary">Introduced a streamlined system for the future editors.</li>
+                                </ul>
+                            </blockquote>
+                            <li><strong>Aon Insight</strong>: Aon (2024)</li>
+                            <blockquote>
+                                <ul class="list">
+                                    <li class="hero-summary">Developed skills in cyberfinance.</li>
+                                    <li class="hero-summary">Understanding of teamwork, communication and problem-solving.</li>
+                                    <li class="hero-summary">Learned how businesses use technology.</li>
+                                </ul>
+                            </blockquote>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!--SKILLS + CONNECT BOXES - SIDE BY SIDE-->
+            <section class="grid-2">
+                <!--Skills Section Box-->
+                <div class="skills">
+                    <div class="card-header">Skills</div>
+
+                    <div class="card-body">
+                        <div class="skills-grid">
+
+                            <div class="skill-card">
+                                <!--HTML RATING & LOGO-->
+                                <img src="html_logo.png" alt="HTML logo" class="skill-logo">
+                                <h3 class="skill-title">HTML</h3>
+                                <p class="skill-rating">8 / 10</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <!--PYTHON RATING & LOGO-->
+                                <img src="python_logo.png" alt="Python Logo" class="skill-logo">
+                                <h3 class="skill-title">Python</h3>
+                                <p class="skill-rating">7 / 10</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <!--JAVASCRIPT RATING & LOGO-->
+                                <img src="java_logo.png" alt="JavaScript Logo" class="skill-logo">
+                                <h3 class="skill-title">Javascript</h3>
+                                <p class="skill-rating">5 / 10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Connect card - links open in another page.-->
+                <div class="connect">
+                    <div class="card-header">Connect</div>
+                    <div class="card-body">
+                        <a class="link-row" href="https://github.com/" target="_blank">Github Profile</a>
+                        <a class="link-row" href="https://www.linkedin.com/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--INTERESTS & HOBBIES SECTION BOX-->
+            <section class="interests">
+                <div class="card-header">Interests & Hobbies</div>
+                <div class="card-body">
+                    <ul class="list">
+                        <li>Coding & Technology</li>
+                        <li>Gaming</li>
+                        <li>Travel</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!--FOOTER
+        Simple and focuses on copyright and an email link to email too.-->
+        <footer>
+            <div class="footer">
+                <p><em>@ 2026 Mahnoor Zia</em></p>
+                <p><em>Logos have been taken from Canva.</em></p>
+                <p><em>Email:<a href="mailto:250118283@aston.ac.uk">example@email.org.uk</a></em></p>
+            </div>
+        </footer>
+    </body>
+</html>

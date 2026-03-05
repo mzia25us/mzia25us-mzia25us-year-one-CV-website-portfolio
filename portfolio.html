@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Page title which is shown in browser tab-->
+        <title>Portfolio | Mahnoor Zia</title>
+
+        <!--Favicon shown in browser tab-->
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <!--Links to the appropriate stylesheet for portfolio.html-->
+        <link rel="stylesheet" href="portfolio.css"/>
+    </head>
+
+    <body>
+        <!--HEADER/NAVIGATION whichis the same across other HTML pages,
+        highlighting which is the current page.-->
+        <header class="topbar">
+            <div class="projects topbar-inner">
+                <!--Branding of name and little sentence summary-->
+                <div class="brand">
+                    <h1 class="name">Mahnoor Zia</h1>
+                    <p class="role">My Portfolio</p>
+                </div>
+
+                <!--Navigation links(whichever is active is the page we are on and can be clicked to get there.)-->
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!--MAIN CONTENT which shows the projects as flipcards along a timeline
+        for visual aesthetics.-->
+        <main class="projects">
+            <h2 class="page-title">My Project Timeline!</h2>
+            <p class="page-subtitle">Hover a project to feel fancy. It flips to show the summary.</p>
+
+            <!--A horizontal timeline line with
+            boxes for the projects arranged above and below it-->
+            <section class="timeline">
+                <!--This is the line itself.-->
+                <div class="timeline-line"></div>
+
+                <!--Makes the grid to space the boxes evenly-->
+                <div class="timeline-grid">
+                    <!--Each project is a button so it can be clicked, states
+                    added via JS and attributes are stored for JS to use.-->
+                    <button class="project project-card top">
+                    
+                    <!--Flip card structure-->
+                    <div class="flip">
+                        <div class="flip-inner">
+                            <!--FRONT FACE - IMAGE AND NAME/SUMMARY-->
+                            <div class="flip-front">
+                                <div class="thumb">
+                                    <img src="cooking_game_screenshot.jpg" alt="Screenshot of cooking game"/>
+                                </div>
+                                <div class="front-text">
+                                    <h3>Flavour Frenzy</h3>
+                                    <p>PyGame</p>
+                                </div>
+                            </div>
+
+                            <!--BACK FACE - DESCRIPTION ON THE BACK.-->
+                            <div class="flip-back">
+                                <h4>Flavour Frenzy</h4>
+                                <p>A 6th form project made using PyGame and MySQL in which I made a cooking game to help education 16-18 year olds on how to cook independently.</p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+        
+                <!--PROJECT CARD 2-->
+                <button class="project project-card bottom">
+
+                    <div class="flip">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <div class="thumb">
+                                    <img src="network_screenshot.jpg" alt="Screenshot of home network."/>
+                                </div>
+                                <div class="front-text">
+                                    <h3>Home Network Design</h3>
+                                    <p>Python & Cisco Packets</p>
+                                </div>
+                            </div>
+
+                            <div class="flip-back">
+                                <h4>Home Office Network Design</h4>
+                                <p>A basic home office network built to connect devices safely. It included a router, 
+                                    a switch and other such nodes connected by proper IP addressing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <!--PROJECT CARD 3-->
+                <button class="project project-card top">
+
+                    <div class="flip">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <div class="thumb">
+                                    <img src="translator_screenshot.jpg" alt="Screenshot of translator app"/>
+                                </div>
+                                <div class="front-text">
+                                    <h3>Real Time Translator</h3>
+                                    <p>HTML & Python </p>
+                                </div>
+                            </div>
+
+                            <div class="flip-back">
+                                <h4>Real Time Translator</h4>
+                                <p>A simple language translator that converts English text into
+                                    Roman Urdu as you type. It updates in real time, making it quick and easy
+                                    to see translations without needing to press a button. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+
+                <!--PROJECT CARD 4-->
+                <button class="project project-card bottom">
+
+                    <div class="flip">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <div class="thumb">
+                                    <img src="quiz_screenshot.png" alt="Screenshot of Quiz Website"/>
+                                </div>
+                                <div class="front-text">
+                                    <h3>Interactive Quiz Game</h3>
+                                    <p>HTML, CSS & JavaScript</p>
+                                </div>
+                            </div>
+
+                            <div class="flip-back">
+                                <h4>Interactive Quiz Game</h4>
+                                <p>A fun and interactive quiz game designed to test users
+                                    with multiple choice questions and track their score as they play.
+                                    It includes a results screen at the end and uses JavaScript to handle user input, scoring, and question progression.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                </div>
+            </section>
+        </main>
+
+        <!--Gives basic copyright/credit/email link-->
+        <footer>
+            <div class="footer">
+            <p>@ 2026 Mahnoor Zia</p>
+            <p>Project screenshots have been downloaded from Google.</P>
+            <p>
+                Email:
+                <a href="mailto:250118283@aston.ac.uk">example@email.org.uk</a>
+            </p>
+            </div>
+        </footer>
+    </body>
+</html>

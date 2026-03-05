@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Contact Me | Mahnoor Zia</title>
+        <!--Favucon shown in tab bar-->
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="contact.css">
+    </head>
+
+    <body>
+        <!--HEADER/NAV BAR which displays name + nav links as expected.-->
+        <header class="topbar main-header">
+            <div class="container topbar-inner">
+                <div class="brand">
+                    <h1 class="name">Mahnoor Zia</h1>
+                    <p class="role">Interested in web design</p>
+                </div>
+
+                <!--Nav Bar as constant with the 
+                other HTML pages.-->
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!--MAIN PAGE CONTENT WITH CONTACT FORM-->
+        <main class="container">
+            <!--Page heading and intructioens-->
+            <h2 class="page-title">Let's work together</h2>
+            <p class="page-subtitle">Enquire about a project by choosing a date and duration. I'll get back to you.</p>
+
+            <!--Contact form section which has validation from contact.js file-->
+            <section class="contact-me">
+                <!--Grid layout for the input fields so
+                it looks nice and orderly.-->
+                <form id="contactForm" novalidate>
+                    <div class="grid">
+                        <div class="field">
+                            <!--Firstname field-->
+                            <label for="firstName">First Name *</label>
+                            <input id="firstName" name="firstName" type="text" placeholder="e.g., Mahnoor" required/>
+                            <small class="error" id="errFirstName"></small>
+                        </div>
+                        <br>
+                        <!--Phone Number field-->
+                        <div class="field">
+                            <label for="phone">Phone number *</label>
+                            <input id="phone" name="phone" type="tel" placeholder="e.g., 07123 456 789" required/>
+                            <small class="error" id="errPhone"></small>
+                        </div>
+                        <br>
+                        <!--EMail field-->
+                        <div class="field">
+                            <label for="email">Email *</label>
+                            <input id="email" name="email" type="email" placeholder="e.g, name@gmail.com" required/>
+                            <small class="error" id="errEmail"></small>
+                        </div>
+                        <br>
+                        <!--Eail confirmation field-->
+                        <div class="field">
+                            <label for="confirmEmail">Confirm Email *</label>
+                            <input id="confirmEmail" name="confirmEmail" type="email" placeholder="retype your email" required/>
+                            <small class="error" id="errConfirmEmail"></small>
+                        </div>
+                        <br>
+                        <!--Project Start Date-->
+                        <div class="field">
+                            <label for="startDate">Project date *</label>
+                            <input id="startDate" name="startDate" type="date" required/>
+                            <small class="error" id="errDate"></small>
+                        </div>
+                        <br>
+                        <!--How long they need it. DUration input-->
+                        <div class="field">
+                            <label for="duration">Duration (days) *</label>
+                            <input id="duration" name="duration" type="number" min="1" step="1" placeholder="e.g., 14" required/>
+                            <small class="error" id="errDuration"></small>
+                        </div>
+                    </div>
+                    <!--Project description text area-->
+                    <div class="field full">
+                        <label for="description">Project description *</label>
+                        <textarea id="description" name="description" rows="5" placeholder="Tell me what you need built..." required></textarea>
+                        <small class="error" id="errDesc"></small>
+                    </div>
+                    <!--How to contact field, preferred method.-->
+                    <fieldset class="field full">
+                        <legend>Preferred contact method*</legend>
+                        <div class="radio-row">
+                            <!--Presents the 3 options for it-->
+                            <label><input type="radio" name="contactPref" value="Email" required>Email</label>
+                            <label><input type="radio" name="contactPref" value="Phone call" required>Phone call</label>
+                            <label><input type="radio" name="contactPref" value="Text message" required>Text Message</label>
+                        </div>
+                        <small class="error" id="errPref"></small>
+                    </fieldset>
+                    <br>
+                    <!--Submit buttons and a little note at the end-->
+                    <div class="submit">
+                        <button type="submit" class="btn">Submit enquiry</button>
+                        <p class="hint">This form does not send an email - it will validate and show a confirmation popup.</p>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!--CONFIRMATION. This essentially checks that every field is full
+        and validation occurs.-->
+        <div class="modal" id="modal" aria-hidden="true">
+            <!--This is the modal dialogue box-->
+            <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+                <h3 id="modalTitle">Confirm your enquiry</h3>
+                <p>Please review your enquiry below and confirm to continue.</p>
+
+                <!--This displays email recipient + sender (emails shown)-->
+                <div class="modal-block">
+                    <p><strong>To:</strong><span id="modalTo"></span></p>
+                    <p><strong>From:</strong><span id="modalFrom"></span></p>
+                </div>
+
+                <!--JS will insert summary of form data here-->
+                <div class="modal-block" id="modalSummary"></div>
+
+                <!--Modal action buttons-->
+                <div class="modal-actions">
+                    <button class="btn secondary" id="cancelBtn" type="button">Cancel</button>
+                    <button class="btn" id="confirmBtn" type="button">Confirm</button>
+                </div>
+
+                <p class="hint">Confirming will not send anything - it will just show a success message.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <p><em>@ 2026 Mahnoor Zia</em></p>
+                <p><em>Email:<a href="mailto:250118283@aston.ac.uk">example@email.org.uk</a></em></p>
+            </div>
+        </footer>
+
+        <!--External Javascript for validation + modal behaviour-->
+        <script src="contact.js"></script>
+    </body>
+</html>
+
+        

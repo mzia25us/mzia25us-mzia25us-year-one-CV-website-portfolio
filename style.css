@@ -1,0 +1,328 @@
+
+
+/* ===== Base ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f7;
+  background-color: #f3f5f7;
+  color: #1f2937;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== Top Bar ===== */
+.topbar {
+  background: #1f3b57;
+  color: white;
+  padding: 18px 0;
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.name {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.role {
+  margin: 6px 0 0;
+  opacity: 0.85;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 6px 2px;
+  opacity: 0.85;
+  border-bottom: 3px solid transparent;
+  position: relative;
+}
+
+.nav-link:hover { opacity: 1; }
+
+.nav-link:hover::after{
+  width: 100%;
+}
+
+.nav-link.active {
+  opacity: 1;
+  border-bottom-color: #4ea1ff;
+}
+
+/* ===== Hero ===== */
+.hero {
+  margin-top: 26px;
+  background: white;
+  border-radius: 12px;
+  padding: 26px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 28px;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.hero-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 6px solid #e5e7eb;
+}
+
+.hero-title {
+  margin: 0 0 10px;
+  font-size: 32px;
+  color: #1f3b57;
+  border-bottom: 3px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.hero-subtitle {
+  margin: 0 0 18px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.hero-summary{
+  margin: 0 0 0px;
+  font-size: 14.5px;
+  color: #374151;
+  font-style: italic;
+}
+
+.btn {
+  display: inline-block;
+  background: #1f3b57;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.btn:hover {filter: brightness(1.05); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);}
+
+/* ===== Card System ===== */
+.grid-2 {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  margin-top: 22px;
+}
+
+.education {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  margin-top: 22px;
+}
+
+.work-experience {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  margin-top: 22px;
+}
+
+.interests {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  margin-top: 22px;
+}
+
+.connect {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  margin-top: 22px;
+}
+
+.skills {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  margin-top: 22px;
+}
+
+.grid-2 .education,
+.grid-2 .work-experience,
+.grid-2 .interests,
+.grid-2 .connect,
+.grid-2 .card,
+.grid-2 .skills {
+  margin-top: 0;
+}
+
+.card-header {
+  background: #1f3b57;
+  color: white;
+  padding: 14px 16px;
+  font-weight: 800;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: #374151;
+}
+
+/* ===== Skills ===== */
+/*.skills {
+  display: grid;
+  gap: 12px;
+}*/
+
+.skill {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.skill-name {
+  font-weight: 800;
+}
+
+.skill-level {
+  color: #6b7280;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+/* ===== Links (Connect with Me) ===== */
+.link-row {
+  display: block;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1f3b57;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.link-row:hover { filter: brightness(0.98); }
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 32px;
+  background: #1f3b57;
+  color: white;
+  padding: 18px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer a { color: white; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-img { height: 260px; }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+
+/* Skills grid */
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.skill-card{
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.skill-logo{
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-title{
+  margin: 0;
+  font-size: 18px;
+  color: #1f3b57;
+}
+
+.skill-rating{
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f3b57;
+}
+
+
+/* Responsive: stack cards vertically if screen is small */
+@media (max-width: 900px) {
+  .timeline { height: auto; padding: 16px; }
+  .timeline-line { display: none; }
+
+  .project-card {
+    position: relative;
+    width: 100%;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    margin: 12px 0;
+  }
+
+}

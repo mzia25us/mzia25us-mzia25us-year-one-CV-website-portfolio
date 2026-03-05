@@ -1,0 +1,262 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f5f7;
+  color: #1f2937;
+}
+
+.projects {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Topbar (matches your main site vibe) */
+.topbar {
+  background: #1f3b57;
+  color: white;
+  padding: 18px 0;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.name { margin: 0; font-size: 34px; font-weight: 700; }
+.role { margin: 6px 0 0; opacity: 0.85; }
+
+.nav { display: flex; gap: 22px; flex-wrap: wrap; }
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  opacity: 0.85;
+  padding: 6px 2px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover { opacity: 1; }
+
+.nav-link.active {
+  opacity: 1;
+  border-bottom-color: #4ea1ff;
+}
+
+/* Page title */
+.page-title {
+  margin: 26px 0 6px;
+  color: #1f3b57;
+  font-size: 28px;
+}
+
+.page-subtitle {
+  margin: 0 0 18px;
+  color: #6b7280;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin-top: 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  overflow: hidden;
+  padding: 26px 0; /* gives breathing room top/bottom */
+}
+
+/* the line across center */
+.timeline-line {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  top: 50%;
+  height: 4px;
+  background: #1f2937;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* grid that evenly spaces cards */
+.timeline-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 34px 28px; /* row gap / column gap */
+  padding: 22px 60px;
+  align-items: center;
+}
+
+/* bigger cards (no absolute positioning anymore) */
+.project-card {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 190px;
+  justify-self: center;
+
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* top/bottom placement via grid rows */
+.project-card.top { grid-row: 1; }
+.project-card.bottom { grid-row: 2; }
+
+/* flip container */
+.flip {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+/* inner flipper */
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+/* flip on hover */
+.project-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* front + back faces */
+.flip-front,
+.flip-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* FRONT styling */
+.flip-front {
+  background: #fafafa;
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+}
+
+/* image area */
+.thumb {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  background: #e9eef5;
+  overflow: hidden;
+  border: 5px solid #1f2937;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.front-text h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #1f3b57;
+}
+
+.front-text p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* BACK styling */
+.flip-back {
+  transform: rotateY(180deg);
+  background: #f0f7ff;
+  padding: 16px;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+}
+
+.flip-back h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #1f3b57;
+}
+
+.flip-back p {
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.mini-tech {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* FOOTER*/
+.footer {
+  margin-top: 32px;
+  background: #1f3b57;
+  color: white;
+  padding: 18px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer a { color: white; }
+
+/* active click state (keep your JS behavior) */
+.project-card.active .flip-front,
+.project-card.active .flip-back {
+  border-color: #4ea1ff;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .timeline-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    grid-template-rows: auto;
+  }
+  .project-card.top,
+  .project-card.bottom {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-line { display: none; }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+}
+
